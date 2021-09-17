@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "ngxSvgSchematic",
+  "title": "SVG component generator options",
+  "description": "Options to pass to the schematic",
+  "type": "object",
+  "properties": {
+    "svgFilesSource": {
+      "description": "A relative path to the SVG files",
+      "type": "string",
+      "default": "src/assets/",
+      "x-prompt": "Enter the relative path to the SVG files"
+    },
+    "svgFilesDestination": {
+      "description": "A relative path to the SVG components destination",
+      "type": "string",
+      "default": "svg-components",
+      "enum": [
+        "src/components",
+        "src/components/svg",
+        "src/components/svg-components"
+      ],
+      "x-prompt": "Enter a relative path to the SVG components destination"
+    }
+  }
+}

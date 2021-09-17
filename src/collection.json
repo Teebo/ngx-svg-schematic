@@ -1,0 +1,11 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ngx-svg-schematic": {
+      "description": "A blank schematic.",
+      "factory": "./ngx-svg-schematic/index#ngxSvgSchematic",
+      "schema": "./ngx-svg-schematic/schema.json",
+      "aliases": ["svg-component", "svg-component-generator"]
+    }
+  }
+}
