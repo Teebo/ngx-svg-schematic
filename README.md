@@ -1,28 +1,35 @@
-# Getting Started With Schematics
+# Getting Started With NgxSvgSchematic
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+A schematic to generate SVG components from SVG files; making it easier 
+to embed SVGs in templates and avoid conflicting CSS rules from multiple
+embedded SVGs.
 
-### Testing
+### Installation
 
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
+`npm i --save ngx-svg-schematic`
 
-Check the documentation with
-```bash
-schematics --help
-```
+Or using the CLI
 
-### Unit Testing
+`ng add ngx-svg-schematic`
 
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
 
-### Publishing
+### Usage
 
-To publish, simply do:
+In your Angular CLI project, run `ng g ngx-svg-schematic:ngx-svg-schematic`.
 
-```bash
-npm run build
-npm publish
-```
+- `Enter` a path to the SVG file directory - `src` being the root
+- `Enter` the SVG file name - the file extension is optional
+- `Enter` a destination path to the SVG component
 
-That's it!
- 
+The schematic will:
+
+- Try to find the file, if found, it will read its content, create a DOM tree, extract any CSS from the mark-up and remove it;
+- Create a component in the provided destination path, write the SVG mark-up in that component's template file;
+- Write the CSS rules to the `styles` property of the created component's configuration 
+
+### Notes
+
+- A manual import and declaration of the created SVG component in a module is required
+- Try first with the `dry-run=true` flag
+
+

@@ -5,14 +5,19 @@
   "description": "Options to pass to the schematic",
   "type": "object",
   "properties": {
-    "svgFilesSource": {
-      "description": "A relative path to the SVG files",
+    "svgFileSource": {
+      "description": "A path to the SVG file directory",
       "type": "string",
       "default": "src/assets/",
-      "x-prompt": "Enter the relative path to the SVG files"
+      "x-prompt": "Enter a path to the SVG file directory"
     },
-    "svgFilesDestination": {
-      "description": "A relative path to the SVG components destination",
+    "svgFileName": {
+      "description": "The SVG file name",
+      "type": "string",
+      "x-prompt": "Enter the SVG file name"
+    },
+    "svgFileDestination": {
+      "description": "A destination path to the SVG component",
       "type": "string",
       "default": "svg-components",
       "enum": [
@@ -20,7 +25,8 @@
         "src/components/svg",
         "src/components/svg-components"
       ],
-      "x-prompt": "Enter a relative path to the SVG components destination"
+      "x-prompt": "Enter a destination path to the SVG component"
     }
-  }
+  },
+  "required": ["svgFileDestination", "svgFileName"]
 }

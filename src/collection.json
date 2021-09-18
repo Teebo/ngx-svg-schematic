@@ -6,6 +6,11 @@
       "factory": "./ngx-svg-schematic/index#ngxSvgSchematic",
       "schema": "./ngx-svg-schematic/schema.json",
       "aliases": ["svg-component", "svg-component-generator"]
+    },
+    "ng-add": {
+      "description": "A schematic to generate SVG components from SVG files",
+      "factory": "./ngx-svg-schematic/index#ngxSvgSchematic",
+      "schema": "./ngx-svg-schematic/schema.json"
     }
   }
 }
