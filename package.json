@@ -1,6 +1,6 @@
 {
   "name": "ngx-svg-schematic",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "A schematic to generate SVG components from SVG files; making it easier to embed SVGs in templates and avoid conflicting CSS rules from multiple embedded SVGs.",
   "scripts": {
     "build": "tsc -p tsconfig.json",
