@@ -1,4 +1,4 @@
-import { strings,  } from '@angular-devkit/core';
+import { strings  } from '@angular-devkit/core';
 import { Rule, SchematicContext, Tree, SchematicsException, url, apply, template, mergeWith, move } from '@angular-devkit/schematics';
 import { normalize } from 'path';
 import { Schema } from './schema';
