@@ -16,7 +16,7 @@ const createSampleSVGFileInTree = (tree: Tree) => {
 
 const defaultOptions = {
   svgFileSource: 'src/assets/',
-  svgFileDestination: 'src/components',
+  svgFileDestination: 'src/app/components',
   svgFileName: 'sample.svg'
 };
 
@@ -56,7 +56,7 @@ describe('ngx-svg-schematic', () => {
     
     const tree = await runner.runSchematicAsync('ngx-svg-schematic', defaultOptions,  appTree).toPromise();
 
-    expect(tree.exists('/src/components/svg-sample.component/svg-sample.component.svg')).toBeTruthy();
-    expect(tree.exists('/src/components/svg-sample.component/svg-sample.component.ts')).toBeTruthy();
+    expect(tree.exists('/src/app/components/svg-sample.component/svg-sample.component.svg')).toBeTruthy();
+    expect(tree.exists('/src/app/components/svg-sample.component/svg-sample.component.ts')).toBeTruthy();
   });
 });

@@ -20,7 +20,7 @@ export function ngxSvgSchematic(_options: Schema): Rule {
     } else {
       const { svgFileSource, svgFileName, svgFileDestination } = _options;
 
-      // We could read the `svgFileSource` for a list of file names the user can selected from
+      // We could read the `svgFileSource` from a list of file names the user can selected from
       // https://github.com/angular/angular-cli/issues/16705
 
       // 1 .check if user provided path starts with '/' if so, remove it
@@ -67,7 +67,7 @@ export function ngxSvgSchematic(_options: Schema): Rule {
 
       const sourceTemplate = url('./files');
 
-      const parameterizedSOurceTemplate = apply(sourceTemplate, [
+      const parameterizedSourceTemplate = apply(sourceTemplate, [
         template({
           ..._options,
           ...strings,
@@ -79,7 +79,7 @@ export function ngxSvgSchematic(_options: Schema): Rule {
       ]);
 
 
-      return mergeWith(parameterizedSOurceTemplate);
+      return mergeWith(parameterizedSourceTemplate);
     }
   };
 }

@@ -21,9 +21,9 @@
       "type": "string",
       "default": "svg-components",
       "enum": [
-        "src/components",
-        "src/components/svg",
-        "src/components/svg-components"
+        "src/app/components",
+        "src/app/components/svg",
+        "src/app/components/svg-components"
       ],
       "x-prompt": "Enter a destination path to the SVG component"
     }
